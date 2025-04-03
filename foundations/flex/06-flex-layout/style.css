@@ -27,52 +27,50 @@ input {
 
 /* SOLUTION: */
 
-.header {
+body {
   display: flex;
- }
-
-.footer {
-  display: flex;
-  background-color: #eee;
-}
-
-.content{
-  display: flex;
+  /*
+    body's height is set to 100vh this makes the body exactly the same height as the viewport.
+    To stick the footer to the bottom,  will need to use flex and change the direction to column.
+  */
   flex-direction: column;
-  align-items: center;
-  padding: 50px;
 }
 
 button {
-  padding: 10px;
-  margin: 5px;
-  font-size: 12px;
+  padding: 8px 16px;
 }
 
-.left-links {
+.content {
+  flex: 1;
   display: flex;
-  flex: auto;
-  justify-content: flex-start;
   align-items: center;
-  gap: 10px;
-  padding: 10px;
-  list-style-type: none;
-}
-
-.right-links {
-  display: flex;
-  flex: auto;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 10px;
-  gap: 10px;
-  list-style-type: none;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
 }
 
 a {
-  /* this removes the line under our links */
+  color: #666;
   text-decoration: none;
-  color: inherit;
+}
+
+.header,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.footer {
+  background: #eee;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 16px
 }
 
 /*
